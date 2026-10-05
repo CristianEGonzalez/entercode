@@ -9,10 +9,10 @@ const Hero = () => {
       className="relative w-full min-h-[90vh] flex items-center justify-center px-4 py-12 lg:px-8 overflow-hidden"
     >
       {/* === FONDO === */}
-      <div
+      {/* <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
         style={{ backgroundImage: `url('${fondo}')` }}
-      />
+      /> */}
       <div className="absolute inset-0 z-0 bg-linear-to-b from-black/70 via-black/80 to-[#020202]" />
 
       {/* Contenedor Principal */}

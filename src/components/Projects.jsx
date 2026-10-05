@@ -44,7 +44,7 @@ function Projects() {
       tags: ["Menú", "Whatsapp Integración"]
     },
     {
-      id: 3,
+      id: 4,
       titulo: "Landing Page - AmaneceresDeptos",
       descripcion: "Lading Page con exposición de propiedades.",
       imagen: amaneceres,
@@ -53,7 +53,7 @@ function Projects() {
     },
 
     {
-      id: 4,
+      id: 5,
       titulo: "Landing Page - PoolClean",
       descripcion: "Landing Page simple para servicios de mantenimiento de piscinas.",
       imagen: poolclean,
