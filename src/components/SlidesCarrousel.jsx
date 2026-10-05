@@ -1,7 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const SlidesCarrousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // Referencias para manejar las coordenadas del toque táctil
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
     const slides = [
     {
@@ -32,7 +36,7 @@ const SlidesCarrousel = () => {
       icon: "🛡️",
       link: "#servicios",
     },
-    
+
     /* EJEMPLO DE SLIDE CON LINK EXTERNO
     {
       id: 4,
@@ -55,8 +59,41 @@ const SlidesCarrousel = () => {
     return () => clearInterval(timer);
   }, [slides.length]);
 
+  // Funciones para manejar el gesto táctil (Swipe)
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 50; // Mínimo de píxeles para considerarlo swipe
+
+    if (distance > minSwipeDistance) {
+      // Swipe a la izquierda -> Siguiente slide
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    } else if (distance < -minSwipeDistance) {
+      // Swipe a la derecha -> Slide anterior
+      setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    }
+
+    // Resetear valores
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+  };
+
   return (
-    <div className="relative w-full h-[400px] flex items-center justify-center lg:justify-end perspective-1000">
+    <div 
+      className="relative w-full h-[400px] flex items-center justify-center lg:justify-end perspective-1000"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       
       {slides.map((slide, index) => (
         <div

@@ -1,4 +1,3 @@
-import fondo from "../assets/galaxy.jpg";
 import ContactButton from "./ContactButton";
 import SlidesCarrousel from "./SlidesCarrousel";
 
@@ -9,10 +8,6 @@ const Hero = () => {
       className="relative w-full min-h-[90vh] flex items-center justify-center px-4 py-12 lg:px-8 overflow-hidden"
     >
       {/* === FONDO === */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url('${fondo}')` }}
-      />
       <div className="absolute inset-0 z-0 bg-linear-to-b from-black/70 via-black/80 to-[#020202]" />
 
       {/* Contenedor Principal */}
@@ -24,15 +19,17 @@ const Hero = () => {
           </small>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-orbitron font-bold text-white leading-tight mb-6">
-            Construimos la web que tu marca <br className="hidden lg:block" />
+            Construimos tu <br className="hidden lg:block" />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-cyan to-brand-purple animate-pulse">
-              necesita
+              presencia digital 
             </span>
           </h1>
 
           <p className="text-gray-300 font-mono text-base sm:text-lg mb-10 leading-relaxed max-w-lg">
-            Confiabilidad asegurada para tu empresa. Transformamos código en
-            resultados de negocio reales.
+            Webs corporativas, landing pages, e-commerce y aplicaciones web. <br className="hidden lg:block" />
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-brand-cyan to-brand-purple animate-pulse">
+              CONFIABILIDAD ASEGURADA PARA TU EMPRESA.
+            </span>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

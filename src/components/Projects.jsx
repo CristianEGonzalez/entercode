@@ -7,6 +7,7 @@ const oldspringfield = "https://images.unsplash.com/photo-1550547660-d9450f85934
 //const medintegral = "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=500";
 const laGrafiK = "https://images.unsplash.com/photo-1715154470884-1c2be0b0129f?auto=format&fit=crop&q=80&w=500";
 const amaneceres = "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&q=80&w=500";
+const entergame = "https://images.unsplash.com/photo-1665041982909-8a86864a1e49?auto=format&fit=crop&q=80&w=500";
 
 function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,30 +21,30 @@ function Projects() {
   const proyectos = [
     {
       id: 1,
+      titulo: "Tienda Digital - EnterGame",
+      descripcion: "Lading Page con catálogo interactivo y consultas detalladas automatizadas.",
+      imagen: entergame,
+      link: "https://entergame.com.ar/",
+      tags: ["Catálogo + filtro","Whatsapp Integratción"]
+    },
+    {
+      id: 2,
       titulo: "Sitio Web - La Grafi-k",
       descripcion: "Lading Page con catálogo interactivo y consultas detalladas automatizadas.",
       imagen: laGrafiK,
       link: "https://lagrafik.com",
-      tags: ["Catálogo","Consultas Detalladas"]
+      tags: ["Catálogo","Consultas Personalizadas"]
     },
     {
-      id: 2,
+      id: 3,
       titulo: "Menú Digital - OldSpringfield",
       descripcion: "Catálogo interactivo para una hamburguesería moderna.",
       imagen: oldspringfield,
       link: "https://menu-digital-template.netlify.app/",
-      tags: ["Menú", "Whatsapp Integration"]
+      tags: ["Menú", "Whatsapp Integración"]
     },
-    /*{
-      id: 3,
-      titulo: "App Web - MedIntegral",
-      descripcion: "Panel administrativo completo para gestión de obras sociales.",
-      imagen: medintegral,
-      link: "https://medintegral.vmdigitai.com/",
-      tags: ["Dashboard", "Database"]
-    },*/
     {
-      id: 3,
+      id: 4,
       titulo: "Landing Page - AmaneceresDeptos",
       descripcion: "Lading Page con exposición de propiedades.",
       imagen: amaneceres,
@@ -52,12 +53,12 @@ function Projects() {
     },
 
     {
-      id: 4,
+      id: 5,
       titulo: "Landing Page - PoolClean",
       descripcion: "Landing Page simple para servicios de mantenimiento de piscinas.",
       imagen: poolclean,
       link: "https://poolclean.com.ar/",
-      tags: ["HTML", "CSS"]
+      tags: ["Servicios", "Whatsapp Form"]
     },
   ];
 
